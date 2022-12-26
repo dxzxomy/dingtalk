@@ -20,7 +20,7 @@ import (
 	"github.com/zhaoyunxing92/dingtalk/v2/request"
 )
 
-type UserDetail struct {
+type vUserDetail struct {
 	Response
 	UserInfoDetail `json:"result"`
 }
@@ -42,6 +42,9 @@ type UserInfoDetail struct {
 
 	// 员工的直属主管
 	ManagerUserId string `json:"manager_userid"`
+
+	// 邮箱
+	Email string `json:"mail"`
 
 	// 手机号码
 	Mobile string `json:"mobile"`
